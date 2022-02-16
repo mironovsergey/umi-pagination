@@ -49,7 +49,7 @@ class custom extends def_module
 
         $items = [];
 
-        if (is_array($pagination['items'])) {
+        if (is_array($pagination) && is_array($pagination['items'])) {
             $start_pages = self::range(
                 1,
                 min($boundary_count, $page_count)
